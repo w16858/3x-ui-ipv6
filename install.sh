@@ -120,16 +120,16 @@ install_x-ui() {
             exit 1
         fi
         echo -e "Got x-ui latest version: ${last_version}, beginning the installation..."
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(arch3xui).tar.gz https://github.com/MHSanaei/3x-ui/releases/download/v2.1.1/x-ui-linux-$(arch3xui).tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-amd64.tar.gz https://github.com/MHSanaei/3x-ui/releases/download/v2.1.1/x-ui-linux-amd64.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Downloading x-ui failed, please be sure that your server can access Github ${plain}"
             exit 1
         fi
     else
         last_version=$1
-        url="https://github.com/MHSanaei/3x-ui/releases/download/v2.1.1/x-ui-linux-$(arch3xui).tar.gz"
+        url="https://github.com/MHSanaei/3x-ui/releases/download/v2.1.1/x-ui-linux-amd64.tar.gz"
         echo -e "Begining to install x-ui $1"
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(arch3xui).tar.gz ${url}
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-amd64.tar.gz ${url}
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Download x-ui $1 failed,please check the version exists ${plain}"
             exit 1
@@ -141,10 +141,10 @@ install_x-ui() {
         rm /usr/local/x-ui/ -rf
     fi
 
-    tar zxvf x-ui-linux-$(arch3xui).tar.gz
-    rm x-ui-linux-$(arch3xui).tar.gz -f
+    tar zxvf x-ui-linux-amd64.tar.gz
+    rm x-ui-linux-amd64.tar.gz -f
     cd x-ui
-    chmod +x x-ui bin/xray-linux-$(arch3xui)
+    chmod +x x-ui bin/xray-linux-amd64
     cp -f x-ui.service /etc/systemd/system/
     wget --no-check-certificate -O /usr/bin/x-ui https://raw.staticdn.net/MHSanaei/3x-ui/main/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
