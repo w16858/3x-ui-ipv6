@@ -1,7 +1,4 @@
-gb加速： gb.333886.xyz
-
-
-IPV6:
+CF IPV6加速(gb.333886.xyz)： 
  bash <(curl -Ls https://raw.githubusercontent.com/w16858/x-ui-ipv6/master/install.sh)
 
 
