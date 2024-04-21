@@ -151,7 +151,7 @@ install_x-ui() {
         last_version=$1
         url="https://gitclone.com/MHSanaei/3x-ui/releases/download/${last_version}/x-ui-linux-$(arch3xui).tar.gz"
         echo -e "Beginning to install x-ui $1"
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(arch3xui).tar.gz ${url}
+       
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Download x-ui $1 failed,please check the version exists ${plain}"
             exit 1
