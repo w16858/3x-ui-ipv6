@@ -5,7 +5,7 @@ CF IPV6加速(gb.333886.xyz)：
 
  bash <(curl -Ls https://raw.githubusercontent.com/w16858/3x-ui-ipv6/master/install.sh)
 
-CF加速(gb.modidc.com)：
+CF加速(gb.ww1.dpdns.org)：
 
  bash <(curl -Ls https://raw.githubusercontent.com/w16858/3x-ui-ipv6/master/install1.sh)
 
